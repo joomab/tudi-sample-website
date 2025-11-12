@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Asegura que la página se vea bien en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta Monedero - Simple</title>
+    
+    <style>
+        /* Estilos básicos y reseteo */
+        body {
+            /* Fuente moderna y legible */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6; /* Un gris muy claro para el fondo */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px; /* Limita el ancho en pantallas grandes */
+            margin: 0 auto; /* Centra el contenido */
+            padding: 20px;
+        }
+
+        /* Encabezado */
+        .header {
+            background-color: #005a9c; /* Color azul corporativo (tomado del original) */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 0 0 10px 10px; /* Esquinas redondeadas sutiles */
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        /* Sección principal (Hero) */
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            margin-top: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Sombra suave */
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            color: #005a9c; /* Color principal */
+            margin-bottom: 15px;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Características */
+        .features {
+            padding: 30px;
+            margin-top: 25px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .features h3 {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .features ul {
+            list-style-type: none; /* Quita los puntos de la lista */
+            padding: 0;
+            max-width: 400px; /* Centra la lista de características */
+            margin: 0 auto;
+        }
+
+        .features li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            /* Usamos flexbox para alinear el emoji y el texto */
+            display: flex;
+            align-items: center;
+        }
+        
+        .features li::before {
+            /* Añade el emoji como contenido */
+            content: attr(data-emoji);
+            font-size: 1.5rem;
+            margin-right: 12px; /* Espacio entre el emoji y el texto */
+        }
+
+        /* Llamado a la acción (CTA) */
+        .cta {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 25px;
+        }
+        
+        .cta p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #ff6f61; /* Un color de acento brillante y amigable */
+            color: white;
+            padding: 15px 35px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px; /* Botón redondeado (píldora) */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #e65c50; /* Un poco más oscuro al pasar el mouse */
+            transform: scale(1.05); /* Efecto sutil de crecimiento */
+        }
+
+        /* Pie de página */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado de la página -->
+    <header class="header">
+        <h1>Cuenta Monedero</h1>
+    </header>
+
+    <!-- Contenedor principal para el contenido -->
+    <main class="container">
+        
+        <!-- Sección de Introducción (Hero) -->
+        <section class="hero">
+            <h2>Tu dinero digital, fácil y rápido.</h2>
+            <p>
+                Cuenta Monedero es tu cuenta digital para manejar tu dinero 
+                directamente desde tu celular.
+            </p>
+        </section>
+
+        <!-- Sección de Características -->
+        <section class="features">
+            <h3>¿Qué puedes hacer?</h3>
+            <ul>
+                <!-- Usamos 'data-emoji' para que el CSS lo muestre -->
+                <li data-emoji="💸">Envía y recibe dinero al instante.</li>
+                <li data-emoji="📱">Paga tus servicios y recarga tiempo aire.</li>
+                <li data-emoji="🛍️">Realiza cobros y pagos fácilmente.</li>
+            </ul>
+        </section>
+
+        <!-- Sección de Llamado a la Acción (CTA) -->
+        <section class="cta">
+            <p>Gestiona tu dinero de forma segura.</p>
+            <a href="#" class="cta-button">¡Regístrate ahora!</a>
+        </section>
+        
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>&copy; 2025 Tu Dinero Digital, S.A. de C.V.</p>
+    </footer>
+
+</body>
+</html>
